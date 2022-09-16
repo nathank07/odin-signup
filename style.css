@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.left{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex: initial;
+    height: 100vh;
+    width: min(500px);
+}
+.left img{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.credits{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+.credits a{
+    color:white;
+}
