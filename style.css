@@ -14,9 +14,12 @@ body{
     width: min(500px);
 }
 .left img{
+    display: flex;
     position: absolute;
     z-index: -1;
-    height: 100vh;
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
 }
 .right{
     display: flex;
