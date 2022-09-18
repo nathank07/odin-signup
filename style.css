@@ -1,9 +1,19 @@
+@font-face {
+    font-family: fa;
+    src: url("./fonts/Norse-Bold.otf") format("opentype");
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body{
     display: flex;
     align-items: center;
     margin: 0;
+    height: 100%;
+    overflow: hidden;
 }
-
 .left{
     position: relative;
     flex-direction: column;
@@ -11,9 +21,9 @@ body{
     display: flex;
     flex: initial;
     height: 100vh;
-    width: min(500px);
+    width: max(500px);
 }
-.left img{
+.left .bg{
     display: flex;
     position: absolute;
     z-index: -1;
@@ -21,14 +31,53 @@ body{
     max-width: 100%;
     min-height: 100%;
 }
+
+.left .bg2{
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
+}
+
 .right{
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1 0 auto;
-    background-color: antiquewhite;
+    background-color: #F9FAFB;
     height: 100vh;
 }
+
+.logo img{
+    max-height:100%;
+    flex-shrink: 2;
+}
+
+.logo h2{
+    font-size: 5rem;
+    font-family: fa, system-ui;
+}
+
+.logo{
+    top: 10rem;
+    position: absolute;
+    display: flex;
+    flex: initial;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    height: 8rem;
+    gap:1em;
+    opacity: 100%;
+    z-index: -1;
+}
+
 
 .card{
     display: flex;
@@ -42,7 +91,7 @@ body{
 }
 
 button{
-    background-color: green;
+    background-color: #596D48;
     color: white;
     border: transparent;
     border-radius: 10px;
@@ -60,9 +109,20 @@ button{
     margin-top: 1rem;
 }
 
+
 h1{
     margin:3rem;
     margin-bottom: 1rem;
+}
+
+.login{
+    font-size: 0.9rem;
+}
+
+.login a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48;
 }
 
 .credits{
@@ -70,6 +130,7 @@ h1{
     color: white;
     bottom: 0;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
 .credits a{
     color:white;
