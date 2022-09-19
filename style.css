@@ -30,16 +30,6 @@ body{
 .left .bg{
     display: flex;
     position: absolute;
-    z-index: -1;
-    object-fit: cover;
-    max-width: 100%;
-    min-height: 100%;
-}
-
-.left .bg2{
-    display: flex;
-    position: absolute;
-    z-index: -1;
     object-fit: cover;
     max-width: 100%;
     min-height: 100%;
@@ -53,6 +43,7 @@ body{
     background-color: #F9FAFB;
     height: 100vh;
     width: 100vh;
+    z-index: 1;
 }
 
 .logo img{
@@ -80,7 +71,6 @@ body{
     height: 8rem;
     gap:1em;
     opacity: 100%;
-    z-index: -1;
 }
 
 
