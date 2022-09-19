@@ -3,6 +3,10 @@
     src: url("./fonts/Norse-Bold.otf") format("opentype");
 }
 
+:root{
+    --margin: 3rem;
+}
+
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -48,6 +52,7 @@ body{
     flex: 1 0 auto;
     background-color: #F9FAFB;
     height: 100vh;
+    width: 100vh;
 }
 
 .logo img{
@@ -81,14 +86,18 @@ body{
 
 .card{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    padding: 32px;
+    padding: var(--margin);
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: white;
     box-sizing: border-box;
-    box-shadow: 0px 5px 8px #888888;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+    text-align: left;
 }
+
 
 button{
     background-color: #596D48;
@@ -97,32 +106,91 @@ button{
     border-radius: 10px;
     width: fit-content;
     padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 8px;
-    margin-left: 0px;
-    margin-bottom: 16px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-shadow: 2px 2px 10px 5px rgba(0,0,0,0.1);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: calc(var(--margin) / 2);
+    cursor: pointer;
 }
 
 .login-section{
-    margin:3rem;
-    margin-top: 1rem;
+    margin:var(--margin);
 }
 
+.space{
+    margin-bottom: 1.5rem;
+}
 
 h1{
-    margin:3rem;
-    margin-bottom: 1rem;
+    margin: var(--margin);
+    font-size: 1.5rem;
+    padding-right: 10%;
+    font-weight: 600;
+}
+
+.card h1{
+    margin: 0;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 .login{
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .login a{
     text-decoration: none;
     font-weight: bold;
     color: #596D48;
+}
+
+label{
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    font-size: smaller;
+    color: #474747;
+    padding-bottom: 0.4rem;
+}
+
+input{
+    border-radius: 5px;
+    border: solid 1px #b2b3b4;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+em{
+    padding-right: 0.1rem;
+}
+
+.error{
+    color: rgb(230, 0, 0);
+    font-weight: initial;
+    letter-spacing: normal;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 0.4rem;
+    opacity: 0;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--margin) / 2);
+    padding-bottom: 1rem;
+}
+
+.row{
+    display: flex;
+    gap: var(--margin)
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
 }
 
 .credits{
